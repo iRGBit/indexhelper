@@ -30,6 +30,7 @@ def main():
         yourFile = defaultFile
 
     print 'Using %s as file and %s as stop word reference.' % (yourFile, yourStopWords)
+    print 
     indexThem(yourFile, yourStopWords)
 
 def indexThem(yourFile, yourStopWords):
