@@ -28,3 +28,5 @@ Enjoy!!!
 * support for writer's favourite file fomats (.docx, .odt...)
 * Page numbers included for a selected set of key words to generate a final index
 * A pony
+
+![Pretty pony](http://www.publicdomainpictures.net/view-image.php?image=75247&picture=a-pony&large=1 "This Pony")
