@@ -1,5 +1,8 @@
 #!/usr/bin/python
-
+################################################################################
+#   iRGBit's indexhelper for reading texts and helping with creating an index  #
+#   http://www.github.com/iRGBit                                               #
+################################################################################
 
 import sys
 import string
