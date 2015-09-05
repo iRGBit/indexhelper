@@ -3,7 +3,7 @@
 import string
 
 punct = set(string.punctuation)
-bookWords = open('files/huckleberry-finn.txt').read().lower().split()
+bookWords = open('files/sample.txt').read().lower().split()
 bookWords = [el.rstrip(string.punctuation).lstrip(string.punctuation) for el in bookWords]
 
 #print bookWords
@@ -25,3 +25,9 @@ finalWords = [x for x in bookWords if x not in stopWords]
 from collections import Counter
 topWords = Counter(finalWords)
 #print topWords
+
+frequent = 20
+
+tops = {k:v for (k,v) in topWords.iteritems() if v > frequent}
+
+print tops
