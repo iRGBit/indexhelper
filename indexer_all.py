@@ -48,16 +48,16 @@ def indexThem(yourFile, yourStopWords):
     topWords = Counter(finalWords)
 
     # calculate average frequency of words to compute average frequency in your text
-    total = 0
-    for w in topWords:
-        total += topWords[w]
-    frequent = total/(len(topWords))
+    #total = 0
+    #for w in topWords:
+    #    total += topWords[w]
+    #frequent = total/(len(topWords))
 
     # only add words that have more than average frequency
-    tops = {k:v for (k,v) in topWords.iteritems() if v >= frequent}
+    tops = {k:v for (k,v) in topWords.iteritems()}
 
     # sort by word count
-    #final = sorted(tops.items(), key=lambda x: x[1], reverse=True)
+    #cfinal = sorted(tops.items(), key=lambda x: x[1], reverse=True)
 
     #sort Alphabetically
     final = sorted(tops.items(), key=lambda x: x[0])
