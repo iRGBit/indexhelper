@@ -1,30 +1,20 @@
 #!/usr/bin/python
 
+yourFile = 'files/sample.txt'
+yourStopWords = 'stop-words_english_1_en.txt'
+
 import string
 
 punct = set(string.punctuation)
-bookWords = open('files/sample.txt').read().decode("unicode-escape").encode("ascii", "ignore").lower().split()
+bookWords = open(yourFile).read().decode("unicode-escape").encode("ascii", "ignore").lower().split()
 bookWords = [el.rstrip(string.punctuation).lstrip(string.punctuation) for el in bookWords]
 
-#print bookWords
+stopWords = open(yourStopWords).read().decode("utf-8-sig").encode("utf-8").splitlines()
 
-stopWords = open('stop-words_english_1_en.txt').read().decode("utf-8-sig").encode("utf-8").splitlines()
-#print stopWords
-
-#from nltk.corpus import stopwords
-
-#stopWords = set(stopwords.words('english'))
-#bookWords = nltk.word_tokenize(open('files/huckleberry-finn.txt').read())
-
-#[x for x in bookWords if x not in stopWords]
 finalWords = [x for x in bookWords if x not in stopWords]
-
-#print bookWords
-
 
 from collections import Counter
 topWords = Counter(finalWords)
-#print topWords
 
 total = 0
 
@@ -35,7 +25,11 @@ frequent = total/(len(topWords))
 
 tops = {k:v for (k,v) in topWords.iteritems() if v > frequent}
 
-final = sorted(tops.items(), key=lambda x: x[1], reverse=True)
+# sort by word count
+#final = sorted(tops.items(), key=lambda x: x[1], reverse=True)
+
+#sort Alphabetically
+final = sorted(tops.items(), key=lambda x: x[0])
 
 for x in range(len(final)):
     print '%s: %s' % (final[x][0], final[x][1])
