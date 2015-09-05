@@ -21,6 +21,12 @@ python indexer.py > out.txt
 ```
 The file out.txt contains the desired list of words + count.
 
+Alternatively use your own paths:
+```
+python indexer.py <yourFile> <stopWords>
+If no arguments are given files/sample.txt and stop_words.txt will be used as default files
+```
+
 Enjoy!!!
 
 **Future improvements will include**
