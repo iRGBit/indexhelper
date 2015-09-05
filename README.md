@@ -1,10 +1,10 @@
 # indexhelper
 
-It was the year 2015 and still computers were maily used by humans to chit chat, make selfies and create Power Point presentations. Yet, the power of automation has not been fully exploited yet and there's still highly educated people wasting their time copy and pasting words around in their aacademic texts.
+It was the year 2015 and still computers were mainly used by humans to chit chat, make selfies and create Power Point presentations. Yet, the power of automation has not been fully exploited yet and there's still highly educated people wasting their time copying and pasting words around in their academic texts.
 
 **Indexing should be easy and fun!**
 
-This Python script is intended to eat all your written words and spit out the most common unique words in your text minus common English language wwords. Alphabetically.
+This Python script is intended to eat all your written words and spit out the most common unique words in your text minus common English language words. Alphabetically.
 
 **That almost sounds like an index, doesn't it?**
 
