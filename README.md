@@ -12,22 +12,19 @@ The human can then use this raw information, paste it into their favourite Word 
 
 **Usage:**
 
-1. Create a .txt document of your writing and call it sample.txt
-2. Put sample.txt in a folder called files. (Alternatively, change paths manually in indexer.py)
-3. Open the terminal, navigate to the indexhelper folder and run something like
-
+1. Create a .txt document of your writing
+2. Open the terminal, navigate to the indexhelper folder and run something like
 ```
-python indexer.py > out.txt
+python indexer.py <yourFile> <stopWords> >out.txt
+If no arguments are given files/sample.txt and stop_words.txt will be used as default files
 ```
 The file out.txt contains the desired list of words + count.
 
-Alternatively use your own paths:
-```
-python indexer.py <yourFile> <stopWords>
-If no arguments are given files/sample.txt and stop_words.txt will be used as default files
-```
-
 Enjoy!!!
+
+**Example Output**
+Have a look at the example folder for example file outputs, e.g. an idex of the GNU license.
+
 
 **Future improvements will include**
 
