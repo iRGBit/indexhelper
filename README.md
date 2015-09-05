@@ -20,10 +20,11 @@ python indexer.py > out.txt
 ```
 The file out.txt contains the desired list of words + count.
 
-Enjoy
+Enjoy!!!
 
 **Future improvements will include**
 
 * Some sort of usabilty for non CLI friends
 * support for writer's favourite file fomats (.docx, .odt...)
 * Page numbers included for a selected set of key words to generate a final index
+* A pony
