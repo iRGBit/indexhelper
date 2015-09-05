@@ -5,7 +5,7 @@
 ################################################################################
 
 yourFile = 'files/sample.txt'
-yourStopWords = 'stop-words.txt'
+yourStopWords = 'stop_words.txt'
 
 import string
 
