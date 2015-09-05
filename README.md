@@ -29,4 +29,4 @@ Enjoy!!!
 * Page numbers included for a selected set of key words to generate a final index
 * A pony
 
-![Pretty pony](http://www.publicdomainpictures.net/view-image.php?image=75247&picture=a-pony&large=1 "This Pony")
+![image alt](http://www.publicdomainpictures.net/pictures/80000/velka/a-pony-1393433833jWp.jpg "This Pony")
