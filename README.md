@@ -1,6 +1,6 @@
 # indexhelper
 
-It was the year 2015 and still computers were mainly used by humans to chit chat, make selfies and create Power Point presentations. Yet, the power of automation has not been fully exploited yet and there's still highly educated people wasting their time copying and pasting words around in their academic texts.
+It is the year 2015 and still computers are mainly used by humans to chit chat, make selfies and create Power Point presentations. Yet, the power of automation has not been fully exploited yet and there's still highly educated people wasting their time copying and pasting words around in their academic texts.
 
 **Indexing should be easy and fun!**
 
@@ -13,7 +13,8 @@ The human can then use this raw information, paste it into their favourite Word 
 **Usage:**
 
 1. Create a .txt document of your writing and call it sample.txt
-2. Open the terminal, navigate to the indexhelper folder and run something like
+2. Put sample.txt in a folder called files. (Alternatively, change paths manually in indexer.py)
+3. Open the terminal, navigate to the indexhelper folder and run something like
 
 ```
 python indexer.py > out.txt
