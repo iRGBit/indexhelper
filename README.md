@@ -13,12 +13,14 @@ The human can then use this raw information, paste it into their favourite Word 
 **Usage:**
 
 1. Create a .txt document of your writing
-2. Open the terminal, navigate to the indexhelper folder and run something like
+2. Open the terminal, navigate to the `indexhelper` folder and run something like
 ```
 python indexer.py <yourFile> <stopWords> >out.txt
 If no arguments are given files/sample.txt and stop_words.txt will be used as default files
 ```
-The file out.txt contains the desired list of words + count.
+The file `out.txt` contains the desired list of words + count.
+
+Note: The file `all_indexer.py` works exactly the same, however puts all words, down to occurence of 1 in the output.
 
 Enjoy!!!
 
