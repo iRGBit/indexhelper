@@ -11,33 +11,45 @@ import string
 import numpy
 
 languages = ['EN', 'DE']
+mylang = 0;
 
 defaultFile = 'files/sample.txt'
-defaultStopWords = 'stopwords/stop_words_%s.txt' % languages[0]
-
+defaultStopWords = 'stopwords/stop_words_%s.txt' % languages[mylang]
 
 def main():
-    if len(sys.argv) > 3:
+    mystring = "Select Language from the following:%s - default is EN: " % (concat(languages))
+    slang = raw_input(mystring)
+    if slang in languages:
+        si = languages[languages.index(slang)]
+        yourStopWords = 'stopwords/stop_words_%s.txt' % si
+        print "Parsing your text with the %s stopwords" % si
+    else:
+        yourStopWords = defaultStopWords
+        print "Not a valid language. Assuming English..."
+
+
+    if len(sys.argv) > 2:
         print
-        print "Usage: python indexer.py <yourFile> <stopWords>"
+        print "Usage: python indexer.py <yourFile>"
         print "If no arguments are given %s and %s will be used as default files" % (defaultFile, defaultStopWords)
         print
         sys.exit()
-    elif len(sys.argv) == 3:
-        yourStopWords = sys.argv[2]
-        yourFile = sys.argv[1]
 
     elif len(sys.argv) == 2:
-        yourStopWords = defaultStopWords
         yourFile = sys.argv[1]
 
     elif len(sys.argv) == 1:
-        yourStopWords = defaultStopWords
         yourFile = defaultFile
-
     print 'Using %s as file and %s as stop word reference.' % (yourFile, yourStopWords)
     print
     indexThem(yourFile, yourStopWords)
+
+def concat(alist):
+    outputstring = ""
+    for a in alist:
+        outputstring = outputstring + " " + a
+    return outputstring
+
 
 def indexThem(yourFile, yourStopWords):
     punct = set(string.punctuation)
@@ -52,7 +64,7 @@ def indexThem(yourFile, yourStopWords):
     # count single occurences of words
     from collections import Counter
     topWords = Counter(finalWords)
-    print topWords
+    #print topWords
 
     # following commented out lines of code are for managin the threshold of indexed word within given percentile
     frequence = []
