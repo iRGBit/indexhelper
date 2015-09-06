@@ -15,6 +15,7 @@ mylang = 0;
 
 defaultFile = 'files/sample.txt'
 defaultStopWords = 'stopwords/stop_words_%s.txt' % languages[mylang]
+defaultOut = 'out.txt'
 
 def main():
     mystring = "Select Language from the following:%s - default is EN: " % (concat(languages))
@@ -27,6 +28,16 @@ def main():
         yourStopWords = defaultStopWords
         print "Not a valid language. Assuming English..."
 
+    mystring = "Select name of ouput text file (default is %s ): " % defaultOut
+    sout = raw_input(mystring)
+    if sout=="":
+        yourOut = defaultOut
+    elif sout.endswith('.txt'):
+        yourOut = sout
+    else:
+        yourOut = sout + '.txt'
+
+    print "Printing your results to %s." % yourOut
 
     if len(sys.argv) > 2:
         print
@@ -40,9 +51,9 @@ def main():
 
     elif len(sys.argv) == 1:
         yourFile = defaultFile
-    print 'Using %s as file and %s as stop word reference.' % (yourFile, yourStopWords)
+    print 'Using %s as file and %s as stop word reference, printing to %s.' % (yourFile, yourStopWords, yourOut)
     print
-    indexThem(yourFile, yourStopWords)
+    indexThem(yourFile, yourStopWords, yourOut)
 
 def concat(alist):
     outputstring = ""
@@ -51,7 +62,7 @@ def concat(alist):
     return outputstring
 
 
-def indexThem(yourFile, yourStopWords):
+def indexThem(yourFile, yourStopWords, yourOut):
     punct = set(string.punctuation)
     bookWords = open(yourFile).read().decode("unicode-escape").encode("ascii", "ignore").lower().split()
     bookWords = [el.rstrip(string.punctuation).lstrip(string.punctuation) for el in bookWords]
@@ -97,9 +108,10 @@ def indexThem(yourFile, yourStopWords):
     #sort Alphabetically
     final = sorted(tops.items(), key=lambda x: x[0])
 
+    outFile=open(yourOut, 'w+')
     for x in range(len(final)):
-        print '%s: %s' % (final[x][0], final[x][1])
-
+        print >> outFile, '%s: %s' % (final[x][0], final[x][1])
+    outFile.close()
 
     #bye!
 
