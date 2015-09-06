@@ -2,6 +2,7 @@
 ################################################################################
 #   iRGBit's indexhelper for reading texts and helping with creating an index  #
 #   http://www.github.com/iRGBit                                               #
+#   hypertext ät birgitbachler dot com                                         #
 ################################################################################
 
 import sys
