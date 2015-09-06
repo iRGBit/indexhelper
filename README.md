@@ -14,10 +14,9 @@ The human can then use this raw information, paste it into their favourite Word 
 
 1. Create a .txt document of your writing
 2. Open the terminal, navigate to the `indexhelper` folder and run something like
-```
-python indexer.py <yourFile>
-If no arguments are given files/sample.txt will be used as default file
-```
+`python indexer.py <yourFile>`
+If no arguments are given files/sample.txt will be used as default file.
+
 3. `Select Language from the following: EN DE - default is EN: `
 Select from the available languages, if no argument is given, English will be used.
 4. `Select name of ouput text file (default is out.txt ): `
