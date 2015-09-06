@@ -1,4 +1,5 @@
 #!/usr/bin/python
+# -*- coding: utf-8 -*-
 ################################################################################
 #   iRGBit's indexhelper for reading texts and helping with creating an index  #
 #   http://www.github.com/iRGBit                                               #
@@ -9,9 +10,11 @@ import sys
 import string
 import numpy
 
+languages = ['EN', 'DE']
 
 defaultFile = 'files/sample.txt'
-defaultStopWords = 'stop_words.txt'
+defaultStopWords = 'stopwords/stop_words_%s.txt' % languages[0]
+
 
 def main():
     if len(sys.argv) > 3:
