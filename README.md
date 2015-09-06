@@ -33,6 +33,12 @@ Have a look at the example folder for example file outputs, e.g. an idex of the 
 * Some sort of usabilty for non CLI friends
 * support for writer's favourite file fomats (.docx, .odt...)
 * Page numbers included for a selected set of key words to generate a final index
+* Multiple language support (per request)
 * A pony
 
 ![image alt](http://www.publicdomainpictures.net/pictures/80000/velka/a-pony-1393433833jWp.jpg "This Pony")
+
+**Contribute**
+
+* Feel free to contact me daslebenistkeinponyhof@birgitbachler.com for feature requests
+* I would be grateful if anyone wishes to contribute to the stop word text file
