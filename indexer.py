@@ -19,7 +19,7 @@ defaultOut = 'out.txt'
 
 def main():
     mystring = "Select Language from the following:%s - default is EN: " % (concat(languages))
-    slang = raw_input(mystring)
+    slang = raw_input(mystring).upper()
     if slang in languages:
         si = languages[languages.index(slang)]
         yourStopWords = 'stopwords/stop_words_%s.txt' % si
