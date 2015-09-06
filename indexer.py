@@ -6,6 +6,8 @@
 
 import sys
 import string
+import numpy
+
 
 defaultFile = 'files/sample.txt'
 defaultStopWords = 'stop_words.txt'
@@ -46,12 +48,29 @@ def indexThem(yourFile, yourStopWords):
     # count single occurences of words
     from collections import Counter
     topWords = Counter(finalWords)
+    print topWords
+
+    # following commented out lines of code are for managin the threshold of indexed word within given percentile
+    frequence = []
+    #pval = 51
+    for w in topWords:
+        frequence.append(topWords[w])
+    #a = numpy.array(frequence)
+    #p = numpy.percentile(a, pval)
 
     # calculate average frequency of words to compute average frequency in your text
     total = 0
     for w in topWords:
         total += topWords[w]
+
+    #print '%s is the total and %s is the length' % (total, len(topWords))
     frequent = total/(len(topWords))
+
+    #print
+    #print '%s is a percentile of %s and %s is the average' % (p, pval, frequent)
+
+
+
 
     # only add words that have more than average frequency
     tops = {k:v for (k,v) in topWords.iteritems() if v >= frequent}
@@ -64,6 +83,7 @@ def indexThem(yourFile, yourStopWords):
 
     for x in range(len(final)):
         print '%s: %s' % (final[x][0], final[x][1])
+
 
     #bye!
 
