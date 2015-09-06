@@ -40,5 +40,5 @@ Have a look at the example folder for example file outputs, e.g. an idex of the 
 
 **Contribute**
 
-* Feel free to contact me daslebenistkeinponyhof@birgitbachler.com for feature requests
+* Feel free to contact me via hypertext ät birgitbachler dot com for feature requests
 * I would be grateful if anyone wishes to contribute to the stop word text file
