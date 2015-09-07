@@ -13,13 +13,17 @@ The human can then use this raw information, paste it into their favourite Word 
 **Usage:**
 
 1. Create a .txt document of your writing
+
 2. Open the terminal, navigate to the `indexhelper` folder and run something like
 `python indexer.py <yourFile>`
 If no arguments are given files/sample.txt will be used as default file.
 
 3. `Select Language from the following: EN DE - default is EN: `
+
 Select from the available languages, if no argument is given, English will be used.
+
 4. `Select name of ouput text file (default is out.txt ): `
+
 Select a name for your output text file. If none is given the file will be named `out.txt`.
 
 The resultined file contains the desired list of words + count.
@@ -27,7 +31,7 @@ The resultined file contains the desired list of words + count.
 Enjoy!!!
 
 **Example Output**
-Have a look at the example folder for example file outputs, e.g. an idex of the GNU license.
+Have a look at the example folder for example file outputs, e.g. an [index of the GNU license](https://github.com/iRGBit/indexhelper/blob/master/examples/GNU_license_example_output.txt).
 
 
 **Future improvements will include**
